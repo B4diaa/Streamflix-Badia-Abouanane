@@ -1,0 +1,19 @@
+@use '../abstracts/variables' as *;
+
+.film-card {
+  background-color: darken($color-bg, 5%);
+  padding: $spacing-md;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: $spacing-sm;
+  }
+}
