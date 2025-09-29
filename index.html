@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plateforme de streaming</title>
     <meta name="description" content="Plateforme en ligne spécialisée en streaming : films et séries.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./inscription.html">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
 
         <div class="logo">
-            <img src="" alt="Logo du site de streamflix">
+            <img src="https://st4.depositphotos.com/1768926/31367/v/450/depositphotos_313673870-stock-illustration-live-stream-logo-design-vector.jpg" alt="Logo du site de streamflix">
         </div>
 
         <div class="inscription">
-            <button><a href="inscription.html"></a>Inscription</button>
-
-
+            <a class="lien-inscription" href="inscription.html">Inscription</a>
         </div>
-        
 
-        <h1 class="mainTitle">Streamflix</h1>
+    </header>
+
+    <h1 class="mainTitle">Streamflix</h1>
 
         <nav class="menu" role="navigation" aria-label="Navigation principale">
             <ul>
@@ -33,23 +32,30 @@
             </ul>
         </nav>
 
-        <p class="navbar">Recherche : </p>
+        <div class="search-container">
+            <form action="/recherche" method="get">
+                <input type="search" name="q" placeholder="Rechercher un film ou une série" required>
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
 
-        <img role="banner" class="imgBanner" src="../streamflix/images/StreamFlix/inception.webp" alt="Image du film vedette">
-
-
-    </header>
+        <div class="hero"> 
+            <img role="banner" class="imgBanner" src="../images/StreamFlix/inception.webp" alt="">
+        </div>
 
     <main class="container" role="main">
+
         <section class="vedette" aria-labelledby="vedette-titre">
 
             <h2 id="vedette-titre">Film vedette</h2>
 
-            <article aria-describedby="article-vedette">
+            <div class="film-grid"> 
+                
+                <article class="film-card" aria-describedby="article-vedette">
 
                 <h3>Inception</h3>
 
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/inception.webp">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/inception.webp">
 
                 <p id="article-vedette">Description : "Un voleur qui s'infiltre dans les rêves des autres pour voler leurs secrets découvre qu'il doit réaliser l'impossible : planter une idée plutôt que de la voler."<br>
                     Année : 2010 <br>
@@ -57,34 +63,39 @@
                     Note : 4.5/5 <br>
                     Genres : Sci-Fi, Thriller</p>
             </article>
+        </div>
+
+           
         </section>
 
         <section class="tendance" aria-labelledby="tendance-titre">
             <h2 id="tendance-titre">Tendances actuelles</h2>
+            <div class="film-grid">
 
-            <article>
+            <article class="film-card">
                 <h3>The Dark Knight (2008)</h3>
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/darknight.webp">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/darknight.webp">
                 <p>Action, Crime, Drama</p>
                 <p>4.8/5</p>
                 <p>Durée : 2h32</p>
             </article>
 
-            <article>
+            <article class="film-card">
                 <h3>Interstellar (2014)</h3>
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/Interstellar_film_poster.jpg">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/Interstellar_film_poster.jpg">
                 <p>Sci-Fi, Drama</p>
                 <p>4.7/5</p>
                 <p>Durée : 2h49</p>
             </article>
 
-            <article>
+            <article class="film-card">
                 <h3>Pulp Fiction (1994)</h3>
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/pulp_fiction.jpg">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/pulp_fiction.jpg">
                 <p>Crime, Drama</p>
                 <p>4.6/5</p>
                 <p>Durée : 2h34</p>
             </article>
+            </div>
 
 
         </section>
@@ -92,61 +103,66 @@
         <section class="recommande" aria-labelledby="recommande-titre">
             <h2 id="recommande-titre">Recommandés pour vous</h2>
 
-            <article>
+            <div class="film-grid">
+
+            <article class="film-card">
                 <h3>Inception (2010)</h3>
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/matrix.jpeg">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/inception.webp">
                 <p>Sci-Fi, Thriller</p>
                 <p>4.5/5</p>
                 <p>Durée : 2h28</p>
             </article>
 
-            <article>
+            <article class="film-card">
                 <h3>The Matrix (1999)</h3>
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/Interstellar_film_poster.jpg">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/matrix.jpeg">
                 <p>Sci-Fi, Drama</p>
                 <p>Action, Sci-Fi</p>
                 <p>4.5/5</p>
                 <p>Durée : 2h16</p>
             </article>
 
-            <article>
+            <article class="film-card">
                 <h3>Forrest Gump (1994)</h3>
-                <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/forrest_gump.jpg">
+                <img class="img-article" alt="Image du film" src="../images/StreamFlix/forrest_gump.jpg">
                 <p>Sci-Fi, Drama</p>
                 <p>Drama, Romance</p>
                 <p>4.4/5</p>
                 <p>Durée : 2h22</p>
             </article>
+            </div>
 
         </section>
 
         <section class="nouveaute" aria-labelledby="nouveaute-titre">
         <h2 id="nouveaute-titre">Nouveautés</h2>
 
-        <article>
+        <div class="film-grid">
+
+        <article class="film-card">
             <h3>Interstellar (2014)</h3>
-            <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/Interstellar_film_poster.jpg">
-                <p>Sci-Fi, Drama</p>
-            <p>Action, Crime, Drama</p>
-            <p>4.8/5</p>
-            <p>Durée : 2h32</p>
+            <img class="img-article" alt="Image du film" src="../images/StreamFlix/Interstellar_film_poster.jpg">
+            <p>Sci-Fi, Drama</p>
+            <p>4.7/5</p>
+            <p>Durée : 2h49</p>
         </article>
 
-        <article>
+        <article class="film-card">
             <h3>The Dark Knight (2008)</h3>
-            <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/darknight.webp">
+            <img class="img-article" alt="Image du film" src="../images/StreamFlix/darknight.webp">
             <p>Action, Crime, Drama</p>
             <p>4.8/5</p>
             <p>Durée : 2h32</p>
         </article>
 
-        <article>
+        <article class="film-card">
             <h3>Inception (2010)</h3>
-            <img class="img-article" alt="Image du film" src="../streamflix/images/StreamFlix/inception.webp">
+            <img class="img-article" alt="Image du film" src="../images/StreamFlix/inception.webp">
             <p>Action, Crime, Drama</p>
             <p>4.5/5</p>
             <p>Durée : 2h28</p>
         </article>
+    </div>
 
         </section>
     </main>
