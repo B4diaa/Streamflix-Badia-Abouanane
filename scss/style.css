@@ -1,0 +1,171 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #141414;
+  line-height: 1.6;
+}
+
+header {
+  padding: 16px;
+}
+@media (min-width: 1024px) {
+  header {
+    padding: 32px;
+  }
+}
+
+.navbar {
+  background-color: #141414;
+}
+.navbar .nav-link {
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #e50914;
+}
+.navbar .nav-link.active {
+  color: #e50914;
+}
+.navbar .btn-outline-danger {
+  border-color: #e50914;
+  color: #e50914;
+}
+.navbar .btn-outline-danger:hover {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+footer {
+  background-color: rgb(7.25, 7.25, 7.25);
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+footer a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+footer a:hover {
+  color: #e50914;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 600px) {
+  .film-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .film-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.lien-inscription {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.lien-inscription:hover {
+  color: #b3b3b3;
+}
+
+.film-card {
+  position: relative !important;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(7.25, 7.25, 7.25);
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.film-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.film-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.watched {
+  opacity: 0.6;
+}
+
+.watched::after {
+  content: "✓ Vu";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  z-index: 10;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin: 32px 0;
+  color: #e50914;
+}
+@media (min-width: 600px) {
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .mainTitle {
+    font-size: 3rem;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.hero img:hover {
+  transform: scale(1.05);
+}
+@media (min-width: 600px) {
+  .hero img {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero img {
+    height: 500px;
+  }
+}/*# sourceMappingURL=style.css.map */

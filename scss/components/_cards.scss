@@ -1,6 +1,9 @@
 @use '../abstracts/variables' as *;
 
 .film-card {
+  position: relative !important;
+  overflow: hidden;
+  cursor: pointer;
   background-color: darken($color-bg, 5%);
   padding: $spacing-md;
   border-radius: 8px;
@@ -16,4 +19,21 @@
     border-radius: 4px;
     margin-bottom: $spacing-sm;
   }
+}
+
+.watched {
+    opacity: 0.6;
+}
+
+.watched::after {
+    content: "✓ Vu";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    z-index: 10;
 }

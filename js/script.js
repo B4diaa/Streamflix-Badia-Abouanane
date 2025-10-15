@@ -1,3 +1,7 @@
+// ===================================
+// EXERCICE 1 : Afficher/masquer sections
+// ===================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButtons = document.querySelectorAll(".toggle-btn");
 
@@ -18,6 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// ===================================
+// EXERCICE 2 : Compter les films disponibles
+// ===================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const articles = document.querySelectorAll(".film-dispo");
   const filmCount = articles.length;
@@ -29,19 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-/*## **3. Marquer un film comme "vu"**
+// ===================================
+// EXERCICE 3 : Marquer un film comme "vu"
+// ===================================
 
-**Objectif :** Ajouter un badge "Vu" sur les films au clic
+document.addEventListener("DOMContentLoaded", () => {
+  const filmCards = document.querySelectorAll(".film-card");
 
-**Comportement :**
+  filmCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.add("watched");
+      if (!card.querySelector(".badge-watched")) {
+        const badge = document.createElement("span");
+        badge.classList.add("badge-watched");
+        badge.textContent = "✓ Vu";
+        card.appendChild(badge);
+      }
+    });
+  });
+});
 
-- Clic sur une carte de film → ajout de la classe `.watched`
-- Un badge "✓ Vu" apparaît visuellement (géré par CSS)
-- Re-clic → retrait du badge
 
-**Concepts utilisés :**
-
-- Event listener sur plusieurs éléments
-- `classList.toggle()`
-- `event.target`*/
-
+// ===================================
+// EXERCICE 4 : Recherche
+// ===================================
