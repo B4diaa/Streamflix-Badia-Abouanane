@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *;
+
+header {
+  padding: $spacing-md;
+
+  @media (min-width: 1024px) {
+    padding: $spacing-lg;
+  }
+}

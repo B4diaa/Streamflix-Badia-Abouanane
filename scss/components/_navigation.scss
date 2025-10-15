@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+.navbar {
+  background-color: $color-bg;
+
+  .nav-link {
+    color: $color-text;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &.active {
+      color: $color-primary;
+    }
+  }
+
+  .btn-outline-danger {
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-text;
+    }
+  }
+}

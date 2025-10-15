@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+footer {
+  background-color: adjust-color($color-bg, $lightness: -5%);
+  padding: $spacing-md;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-lg;
+}
+
+footer a {
+  color: $color-accent;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
